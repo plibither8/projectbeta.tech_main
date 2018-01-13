@@ -1,29 +1,74 @@
-@charset "utf-8"
+@require "imports/base.styl"
 
-html, body, :root
+::-moz-selection
+    color #fff
+    background #77dd77
+
+
+::selection
+    color: #fff; 
+    background #77dd77
+
+
+section.welcome 
 	width 100%
 	height 100%
-	background white
+	display flex
+	flex-flow column
+	align-items center
+	justify-content center
 
-*
-	padding 0
-	margin 0
-	position relative
-	box-sizing border-box
-	transition 0.4s ease
-	text-rendering optimizeLegibility
-	text-rendering geometricPrecision
-	font-smooth always
-	font-smoothing antialiased
-	-moz-font-smoothing antialiased
-	-webkit-font-smoothing antialiased
-	-webkit-font-smoothing subpixel-antialiased
-	-moz-osx-font-smoothing grayscale
+	div.top
+		height 100%
+		width 100%
+		display flex
+		flex-direction column
+		justify-content space-between
+		align-items center
+		
+		a
+			align-self flex-end
+			margin 4vh
+			font-variant small-caps
+			color #444
+			font-size 20px
+			font-family anonymous-pro
+			border-bottom 1px solid
 
-a
-	&:link, &:visited, &:hover, &:visited:hover, &:focus
-		text-decoration none
+		h1 
+			color limed-spruce
+			font-size 5vw
+			font-weight 100
 
-@import "imports/typography"
-@import "imports/variables"
-@import "imports/welcome"
+			code.light
+				font-family code-light
+
+			code.bold 
+				font-family code-bold
+
+			@media screen and (max-width: small)
+				font-size 13vw
+				
+	hr
+		width 100%
+		background #eee
+		margin 1% 0
+		border none
+		height 3px
+	
+	div.bottom
+		height 100%
+		width 100%
+		display flex
+		justify-content center
+		
+		h2 
+			color silver-sand
+			letter-spacing 2px
+			font 100 18px/1 anonymous-pro
+			
+			@media screen and (max-width: small)
+				margin 10px 0 0 0
+				width 90%
+				overflow-wrap break-word
+				text-align center

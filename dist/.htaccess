@@ -3,7 +3,7 @@ RewriteEngine on
 # Redirect to domain without www.
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule .* http://%1%{REQUEST_URI} [R=301,L]
+RewriteRule .* https://%1%{REQUEST_URI} [R=301,L]
 
 # Same for HTTPS:
 # RewriteCond %{HTTPS} on
@@ -13,7 +13,7 @@ RewriteRule .* http://%1%{REQUEST_URI} [R=301,L]
 # RewriteCond %{REQUEST_FILENAME} !-f
 # RewriteCond %{REQUEST_URI} !\/$
 # RewriteCond %{REQUEST_URI} !\/[^\/]*\.[^\/]+$
-# RewriteRule .* http://%{HTTP_HOST}%{REQUEST_URI}/ [L,R=301]{
+# RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI}/ [L,R=301]{
 # Remove .html extenstion
 # RewriteCond %{REQUEST_FILENAME} !-d
 # RewriteCond %{REQUEST_FILENAME}\.html -f
