@@ -1,5 +1,5 @@
 {
-  "name": "sanskritischool.edu.in",
+  "name": "ProjectBeta",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lordharambae/sanskritischool.edu.in.git"
+    "url": "git+https://github.com/plibither8/ProjectBeta.tech.git"
   },
   "author": "KSL+plibither8",
   "bugs": {
-    "url": "https://github.com/lordharambae/sanskritischool.edu.in/issues"
+    "url": "https://github.com/plibither8/ProjectBeta.tech/issues"
   },
-  "homepage": "https://github.com/lordharambae/sanskritischool.edu.in#readme",
+  "homepage": "https://github.com/plibither8/ProjectBeta.tech#readme",
   "dependencies": {
     "x-tag": "^1.5.11"
   },
