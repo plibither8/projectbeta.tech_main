@@ -6,13 +6,13 @@ const stylus = require("gulp-stylus");
 const surge = require("gulp-surge");
 
 gulp.task('pug', function() {
-	return gulp.src(['src/pug/**/*.pug', '!src/pug/includes/*'])
+	return gulp.src('src/pug/pages/*.pug')
 	.pipe(pug())
 	.pipe(gulp.dest('dist/'));
 })
 
 gulp.task('stylus', function() {
-	return gulp.src('src/styl/*.styl')
+	return gulp.src('src/styl/pages/*.styl')
 	.pipe(stylus({
 		compress: true
 	}))
