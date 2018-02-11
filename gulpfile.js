@@ -19,7 +19,7 @@ gulp.task('stylus', function() {
 	.pipe(autoprefix({
 		cascade: false
 	}))
-	.pipe(gulp.dest('dist/css'));
+	.pipe(gulp.dest('dist/assets/css'));
 })
 
 gulp.task('scripts', function() {
@@ -29,7 +29,7 @@ gulp.task('scripts', function() {
 		presets: ['env'],
 		minified: true
 	}))
-	.pipe(gulp.dest('dist/js'))
+	.pipe(gulp.dest('dist/assets/js'))
 })
 
 gulp.task('deploy', function() {
