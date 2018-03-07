@@ -1,29 +1,76 @@
 section.container
 
-	header.masthead.flex
+	section.sidebar
 
-		.container.flex
+		.heading.flex
 
-			.links.flex
+			img(src="/assets/img/logo-white.svg")
 
-				a(href="#") about
-				a(href="#") event
-				a(href="#") contact
+			h1
+				span.project Project
+				span.beta Beta
 
-			.space
+		.links
 
-			a(href="/")
+			.container
+
+				ul
+
+					li.level1
+						a(href="#").yellow
+							span.right.inactive ▶
+							|./about/
+
+					li.level2.nodisplay
+						a(href="#").yellow
+							span ▶
+							|./team.html
+					li.level2.nodisplay
+						a(href="#").yellow
+							span ▶
+							|./history.php
+					li.level2.nodisplay
+						a(href="#").yellow
+							span ▶
+							|./alumni.html
+
+					li.level1
+						a(href="#").blue
+							span ▶
+							|./events.html
+					li.level1
+						a(href="#").green
+							span ▶
+							|./register.php
+					li.level1
+						a(href="#").red
+							span ▶
+							|./contact.html
 			
-				img(src="/assets/img/logo-white.svg")
+			script.
+				var a = document.querySelector(".links a");
+				function alternateDisplay() {
+					var span = document.querySelector("span.right");
+					var level2links = document.querySelectorAll(".level2");
+					if (span.innerHTML === "▶") {
+						span.innerHTML = "◢";
+						for (var i = 0; i < level2links.length; i++) {
+							level2links[i].classList.remove("nodisplay");
+						}
+					}
+					else {
+						span.innerHTML = "▶";
+						for (var i = 0; i < level2links.length; i++) {
+							level2links[i].classList.add("nodisplay");
+						}
+					}
+				}
+				a.addEventListener('click', alternateDisplay);
+		
+		.footer
 
-			.links.flex
-
-				a(href="#") team
-				a(href="#") blog
-				a(href="#") alumni
-
-		//- h1 
-			
-			span.codeLight Project
-			
-			span.codeBold Beta
+			p © 2018 ProjectBeta
+	
+	section.main
+	
+		.container

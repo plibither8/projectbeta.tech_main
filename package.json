@@ -34,6 +34,7 @@
     "gulp-stylus": "^2.6.0",
     "gulp-surge": "0.1.0",
     "gulp-watch": "^4.3.11",
+    "gulp-webserver": "^0.9.1",
     "x-tag": "^1.5.11"
   }
 }
