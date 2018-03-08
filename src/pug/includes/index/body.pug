@@ -9,6 +9,8 @@ section.container
 			h1
 				span.project Project
 				span.beta Beta
+		.subject
+			p files
 
 		.links
 
@@ -17,55 +19,103 @@ section.container
 				ul
 
 					li.level1
+						a(href="#").red
+							span ▶
+							|index.html
+					li.level1
 						a(href="#").yellow
-							span.right.inactive ▶
-							|./about/
+							span.right.about ▶
+							|about
 
-					li.level2.nodisplay
+					li.level2.nodisplay.about
 						a(href="#").yellow
 							span ▶
-							|./team.html
-					li.level2.nodisplay
+							|team.html
+					li.level2.nodisplay.about
 						a(href="#").yellow
 							span ▶
-							|./history.php
-					li.level2.nodisplay
+							|history.html
+					li.level2.nodisplay.about
 						a(href="#").yellow
 							span ▶
-							|./alumni.html
+							|alumni.html
 
 					li.level1
 						a(href="#").blue
+							span.right.events ▶
+							|events
+
+					li.level2.nodisplay.events
+						a(href="#").blue
 							span ▶
-							|./events.html
+							|#programming
+					li.level2.nodisplay.events
+						a(href="#").blue
+							span ▶
+							|#gaming
+					li.level2.nodisplay.events
+						a(href="#").blue
+							span ▶
+							|#design
+					li.level2.nodisplay.events
+						a(href="#").blue
+							span ▶
+							|#quiz
+					li.level2.nodisplay.events
+						a(href="#").blue
+							span ▶
+							|#debate
+					li.level2.nodisplay.events
+						a(href="#").blue
+							span ▶
+							|#audio
+
 					li.level1
 						a(href="#").green
 							span ▶
-							|./register.php
+							|register.php
 					li.level1
 						a(href="#").red
 							span ▶
-							|./contact.html
+							|contact.html
 			
 			script.
-				var a = document.querySelector(".links a");
-				function alternateDisplay() {
-					var span = document.querySelector("span.right");
-					var level2links = document.querySelectorAll(".level2");
+				var aboutButton = document.querySelector(".links li:nth-child(2) a");
+				var eventsButton = document.querySelector(".links li:nth-child(6) a");
+				function about() {
+					var span = document.querySelector("span.right.about");
+					var about_l2 = document.querySelectorAll(".level2.about");
 					if (span.innerHTML === "▶") {
 						span.innerHTML = "◢";
-						for (var i = 0; i < level2links.length; i++) {
-							level2links[i].classList.remove("nodisplay");
+						for (var i = 0; i < about_l2.length; i++) {
+							about_l2[i].classList.remove("nodisplay");
 						}
 					}
 					else {
 						span.innerHTML = "▶";
-						for (var i = 0; i < level2links.length; i++) {
-							level2links[i].classList.add("nodisplay");
+						for (var i = 0; i < about_l2.length; i++) {
+							about_l2[i].classList.add("nodisplay");
 						}
 					}
 				}
-				a.addEventListener('click', alternateDisplay);
+				function events() {
+					var span = document.querySelector("span.right.events");
+					var events_l2 = document.querySelectorAll(".level2.events");
+					if (span.innerHTML === "▶") {
+						span.innerHTML = "◢";
+						for (var i = 0; i < events_l2.length; i++) {
+							events_l2[i].classList.remove("nodisplay");
+						}
+					}
+					else {
+						span.innerHTML = "▶";
+						for (var i = 0; i < events_l2.length; i++) {
+							events_l2[i].classList.add("nodisplay");
+						}
+					}
+				}
+				aboutButton.addEventListener('click', about);
+				eventsButton.addEventListener('click', events);
 		
 		.footer
 

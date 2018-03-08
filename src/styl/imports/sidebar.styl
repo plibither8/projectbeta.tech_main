@@ -27,8 +27,26 @@ section.container
 				.beta
 					font-family codeBold
 
+		.subject
+			background #fff2
+
+			p
+				padding-left 20px
+				color #ddd
+				font-variant small-caps
+				font-family "Ubuntu"
+				font-size 22px
+				font-weight 500
+				padding-bottom 3px
+
 		.links
 			width 100%
+			// padding 20px 0
+			height 50%
+			overflow-y auto
+			overflow-x hidden
+			border-top 1px solid #0e0f10
+			border-bottom 1px solid #0e0f10
 
 			.container
 				width 100%
@@ -45,28 +63,31 @@ section.container
 							width 100%
 							display block
 							text-decoration none
-							padding 6px 20px
+							padding 5px 20px
 							padding-right 0
 							font-family "Input Mono", monospace
+							font-family 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+							font-size 14px
+							font-weight 300
+							letter-spacing 0.5px
 
 							span
 								margin-right 6px
-								font-size 12px
+								font-size 10px
 								visibility hidden
 
 								&.right
 									visibility visible
 
 						&:hover
-							background #ffffff22
+							background #ffffff33
 						
 						&.level2
 
 							a
-								padding-left 40px
-
-						&:nth-child(4)
-							margin-bottom 10px
+								padding-left 0
+								margin-left 40px
+								border-left 1px solid
 
 
 		.footer
