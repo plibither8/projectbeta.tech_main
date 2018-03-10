@@ -155,7 +155,6 @@ function sidebarOpen() {
 		hamburger.classList.add('nodisplay');
 		cross.classList.remove('nodisplay');
 		if (getComputedStyle(html).maxWidth === '900px') {
-			console.log("shit");
 			mainEl.style.marginLeft = '0px';
 			mainEl.style.left = '250px';
 		}
@@ -170,7 +169,6 @@ function sidebarClose() {
 		hamburger.classList.remove('nodisplay');
 		cross.classList.add('nodisplay');
 		if (getComputedStyle(html).maxWidth === '900px') {
-			console.log("shit");
 			mainEl.style.marginLeft = '50px';
 			mainEl.style.left = '0px';
 		}
