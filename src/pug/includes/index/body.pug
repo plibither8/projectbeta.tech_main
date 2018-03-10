@@ -11,6 +11,8 @@ section.container
 				span.beta Beta
 
 		.subject.flex
+
+			#filesTriangle.triangle.open
 			p FILES
 
 		.links
@@ -22,8 +24,8 @@ section.container
 					li.level1
 						a(href="#").white index.html
 					li.level1
-						a(href="#").yellow.folder
-							#aboutTriangle.open
+						a(href="#").yellow.level2
+							#aboutTriangle.triangle.open
 							|about
 
 					li.level2.about
@@ -36,8 +38,8 @@ section.container
 						a(href="#").yellow alumni.html
 
 					li.level1
-						a(href="#").blue.folder
-							#eventsTriangle.open
+						a(href="#").blue.level2
+							#eventsTriangle.triangle.open
 							|events
 
 					li.level2.events
@@ -63,51 +65,10 @@ section.container
 
 					li.level1
 						a(href="#").red contact.html
-			
-			script.
-				var aboutButton = document.querySelector(".links li:nth-child(2)");
-				var eventsButton = document.querySelector(".links li:nth-child(6)");
-				function about() {
-					console.log("g");
-					var triDiv = document.querySelector("#aboutTriangle");
-					var level2 = document.querySelectorAll(".level2.about");
-					if (triDiv.classList.contains('closed')) {
-						triDiv.classList.remove('closed');
-						triDiv.classList.add('open');
-						for (var i = 0; i < level2.length; i++) {
-							level2[i].classList.remove("nodisplay");
-						}
-					}
-					else {
-						triDiv.classList.remove('open');
-						triDiv.classList.add('closed');						
-						for (var i = 0; i < level2.length; i++) {
-							level2[i].classList.add("nodisplay");
-						}
-					}
-				}
-				function events() {
-					var triDiv = document.querySelector("#eventsTriangle");
-					var level2 = document.querySelectorAll(".level2.events");
-					if (triDiv.classList.contains('closed')) {
-						triDiv.classList.remove('closed');
-						triDiv.classList.add('open');
-						for (var i = 0; i < level2.length; i++) {
-							level2[i].classList.remove("nodisplay");
-						}
-					}
-					else {
-						triDiv.classList.remove('open');
-						triDiv.classList.add('closed');						
-						for (var i = 0; i < level2.length; i++) {
-							level2[i].classList.add("nodisplay");
-						}
-					}
-				}
-				aboutButton.addEventListener('click', about);
-				eventsButton.addEventListener('click', events);
-		
+
 		.subject.flex
+
+			#countdownTriangle.triangle.open
 			p COUNTDOWN
 		
 		.countdown
@@ -126,45 +87,10 @@ section.container
 				.seconds.flex
 					p 00
 					h2 seconds
-		
-		script.
-			var end = new Date('08/18/2018 0:0 AM');
-
-			var _second = 1000;
-			var _minute = _second * 60;
-			var _hour = _minute * 60;
-			var _day = _hour * 24;
-			var timer;
-
-			var daysElement = document.querySelector('.days p');
-			var hoursElement = document.querySelector('.hours p');
-			var minutesElement = document.querySelector('.minutes p');
-			var secondsElement = document.querySelector('.seconds p');
-
-			function showRemaining() {
-				var now = new Date();
-				var distance = end - now;
-				if (distance < 0) {
-
-					clearInterval(timer);
-					document.getElementById('countdown').innerHTML = 'EXPIRED!';
-
-					return;
-				}
-				var days = Math.floor(distance / _day);
-				var hours = Math.floor((distance % _day) / _hour);
-				var minutes = Math.floor((distance % _hour) / _minute);
-				var seconds = Math.floor((distance % _minute) / _second);
-
-				days < 10 ? daysElement.innerHTML = "0" + days : daysElement.innerHTML = days;
-				hours < 10 ? hoursElement.innerHTML = "0" + hours : hoursElement.innerHTML = hours;
-				minutes < 10 ? minutesElement.innerHTML = "0" + minutes : minutesElement.innerHTML = minutes;
-				seconds < 10 ? secondsElement.innerHTML = "0" + seconds : secondsElement.innerHTML = seconds;
-			}
-
-			timer = setInterval(showRemaining, 1000);
 
 		.subject.flex
+
+			#socialTriangle.triangle.open
 			p SOCIAL
 
 		.social

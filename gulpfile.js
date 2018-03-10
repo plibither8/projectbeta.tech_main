@@ -1,5 +1,6 @@
-const babel = require("gulp-babel");
 const autoprefix = require("gulp-autoprefixer");
+const babel = require("gulp-babel");
+const concat = require("gulp-concat");
 const gulp = require("gulp");
 const pug = require("gulp-pug");
 const stylus = require("gulp-stylus");
@@ -38,6 +39,7 @@ gulp.task('scripts', function() {
 		presets: ['env'],
 		minified: true
 	}))
+	.pipe(concat('scripts.js'))
 	.pipe(gulp.dest('dist/assets/js'))
 })
 
