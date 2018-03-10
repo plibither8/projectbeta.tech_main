@@ -1,10 +1,17 @@
 @require "../imports/base.styl"
 
 section.container
+	overflow-x hidden
 
-    section.main
-        height 100%
-        margin-left 250px
-        overflow-y scroll
-        overflow-x hidden
-        background #ddd
+	section.main
+		height 100%
+		margin-left 250px
+		overflow-y scroll
+		overflow-x hidden
+		background #ddd
+
+		.container
+			max-width 900px
+			width 90%
+
+@import "../imports/media-queries/*"

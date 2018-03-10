@@ -1,3 +1,4 @@
+// Open-Close Tabs
 var aboutButton = document.querySelector(".links li:nth-child(2)");
 var eventsButton = document.querySelector(".links li:nth-child(6)");
 var filesButton = document.querySelectorAll(".subject")[0];
@@ -92,6 +93,8 @@ filesButton.addEventListener('click', files);
 countdownButton.addEventListener('click', countdown);
 socialButton.addEventListener('click', social);
 
+
+// Countdown
 var end = new Date('08/18/2018 0:0 AM');
 
 var _second = 1000;
@@ -127,3 +130,52 @@ function showRemaining() {
 }
 
 timer = setInterval(showRemaining, 1000);
+
+
+// Open-Close Sidebar
+var html = document.documentElement;
+var sidebar = document.querySelector('section.sidebar');
+var mainEl = document.querySelector('section.main');
+var hamburger = document.querySelector('#hamburger');
+var cross = document.querySelector('#cross');
+
+if (getComputedStyle(html).maxWidth === '900px') {
+	sidebar.classList.remove('open');
+	sidebar.classList.add('closed');
+	mainEl.style.marginLeft = '50px';
+	hamburger.classList.remove('nodisplay');
+	cross.classList.add('nodisplay');
+}
+
+function sidebarOpen() {
+	if (sidebar.classList.contains('closed')) {
+		sidebar.classList.remove('closed');
+		sidebar.classList.add('open');
+		mainEl.style.marginLeft = '250px';
+		hamburger.classList.add('nodisplay');
+		cross.classList.remove('nodisplay');
+		if (getComputedStyle(html).maxWidth === '900px') {
+			console.log("shit");
+			mainEl.style.marginLeft = '0px';
+			mainEl.style.left = '250px';
+		}
+	}
+}
+
+function sidebarClose() {
+	if (sidebar.classList.contains('open')) {
+		sidebar.classList.remove('open');
+		sidebar.classList.add('closed');
+		mainEl.style.marginLeft = '50px';
+		hamburger.classList.remove('nodisplay');
+		cross.classList.add('nodisplay');
+		if (getComputedStyle(html).maxWidth === '900px') {
+			console.log("shit");
+			mainEl.style.marginLeft = '50px';
+			mainEl.style.left = '0px';
+		}
+	}
+}
+
+hamburger.addEventListener('click', sidebarOpen);
+cross.addEventListener('click', sidebarClose);

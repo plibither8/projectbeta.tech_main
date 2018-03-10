@@ -1,223 +1,243 @@
 section.container
 
 	section.sidebar
-		width 250px
 		height 100%
 		background darkBlueGrey
 		position fixed
 		top 0
 		left 0
 		border-right 1px solid #333
-		font-family 'Ubuntu', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-		overflow-y auto
-		overflow-x hidden
 		font-weight 500
+		user-select none
 
 		.heading
-			padding 13% 0
-			margin 0 auto
-			background #161719
-			flex-direction column
-
-			img
-				height 80px
-				width 80px
-				margin-bottom 20px
 
 			h1
 				font-size 30px
 				color #ffffff
-			
+
 				.project
 					font-family codeLight
 
 				.beta
 					font-family codeBold
-
-		.subject
-			background #fff2
-			height 28px
-			justify-content flex-start
+			
+		> svg
+			fill #ccc
+			position absolute
+			top 0
+			z-index 1
 			cursor pointer
-			border-top 1px solid #0e0f10
-			border-bottom 1px solid #0e0f10
-			
-			p
-				color #ddd
-				font-family "Ubuntu"
-				font-size 15px
-			
-			.triangle
-				margin 0 6px
+	
+			&#hamburger
+				height 40px
+				margin-top 8px
 
-		.links
-			width 100%
-			padding-bottom 20px
+			&#cross
+				margin 15px 0 0 15px
+
+		&.sidebar.open
+			width 250px
 			overflow-y auto
 			overflow-x hidden
-			border-right 1px solid #0e0f10
 
-			.container
-				overflow hidden
+			.heading
+				padding 13% 0
+				margin 0 auto
+				background #161719
+				flex-direction column
+
+				img
+					height 80px
+					width 80px
+					margin-bottom 20px
+
+			.subject
+				background #fff2
+				height 28px
+				justify-content flex-start
+				cursor pointer
+				border-top 1px solid #0e0f10
+				border-bottom 1px solid #0e0f10
+
+				p
+					color #ddd
+					font-family "Ubuntu"
+					font-size 15px
+
+				.triangle
+					margin 0 6px
+
+			.links
+				width 100%
+				padding-bottom 20px
+				overflow-y auto
+				overflow-x hidden
+				border-right 1px solid #0e0f10
+
+				.container
+					overflow hidden
+
+					ul
+						width 100%
+
+						li
+							width 100%
+							color #eee
+
+							a
+								width 100%
+								display block
+								text-decoration none
+								padding 5px 20px
+								padding-right 0
+								font-size 14px
+								letter-spacing 0.5px
+								margin-left 14px
+
+								&.level2
+									margin-left 0px
+
+							&:hover
+								background #ffffff33
+
+							&.level2
+
+								a
+									padding-left 10px
+									margin-left 34px
+									border-left 1px solid
+
+								&.about
+
+									a
+										border-left-color #edda7e38 !important
+
+								&.events
+
+									a
+										border-left-color #80baf945 !important
+
+				&::-webkit-scrollbar
+					width 8px
+
+				&::-webkit-scrollbar-thumb
+					background #bbb
+
+				&::-webkit-scrollbar-track
+					background #3e4044
+
+			.countdown
+
+				.timer
+					width 100%
+					padding 10px 0
+					justify-content space-around
+
+					.flex
+						flex-direction column
+
+						p
+							font-size 16px
+							color white
+							font-family monospace
+
+						h2
+							font-size 14px
+							color white
+							font-variant small-caps
+
+			.social
+				width 100%
 
 				ul
 					width 100%
+					padding-bottom 20px
+					padding 5px 0
 
 					li
 						width 100%
-						color #eee
+						height 26px
+						cursor pointer
 
 						a
 							width 100%
-							display block
 							text-decoration none
-							padding 5px 20px
-							padding-right 0
+							padding-left 20px
 							font-size 14px
 							letter-spacing 0.5px
-							margin-left 14px
-								
-							&.level2
-								margin-left 0px
+							justify-content flex-start
+							display inline-flex
+
+							svg
+								height 15px
+								margin 0 10px 0 0
+
+								path
+									fill white
+
+								&:nth-child(2)
+									margin 0 15px
 
 						&:hover
 							background #ffffff33
-						
-						&.level2
-
-							a
-								padding-left 10px
-								margin-left 34px
-								border-left 1px solid
-							
-							&.about
-
-								a
-									border-left-color #edda7e38 !important
-							
-							&.events
-
-								a
-									border-left-color #80baf945 !important
 
 			&::-webkit-scrollbar
 				width 8px
-				
+
 			&::-webkit-scrollbar-thumb
 				background #bbb
 
 			&::-webkit-scrollbar-track
-				background #3e4044 
+				background #3e4044
 
-		.countdown
-			
-			.timer
-				width 100%
-				padding 10px 0
-				justify-content space-around
-				
-				.flex
-					flex-direction column
-					
-					p
-						font-size 16px
-						color white
-						font-family monospace
-					
-					h2
-						font-size 14px
-						color white
-						font-variant small-caps
+			.triangle
+				width 0
+				height 0
+				border-style solid
+				display inline-block
+				margin-right 6px
 
-		.social
-			width 100%
-
-			ul
-				width 100%
-				padding-bottom 20px
-				padding 5px 0
-
-				li
-					width 100%
-					height 26px
-					cursor pointer
-
-					a
-						width 100%
-						text-decoration none
-						padding-left 20px
-						font-size 14px
-						letter-spacing 0.5px
-						justify-content flex-start
-						display inline-flex
-
-						svg
-							height 15px
-							margin 0 10px 0 0
-
-							path
-								fill white
-
-							&:nth-child(2)
-								margin 0 15px
-				
-					&:hover
-						background #ffffff33
-		
-		&::-webkit-scrollbar
-			width 8px
-			
-		&::-webkit-scrollbar-thumb
-			background #bbb
-
-		&::-webkit-scrollbar-track
-			background #3e4044 
-		
-		.triangle
-			width 0
-			height 0
-			border-style solid
-			display inline-block
-			margin-right 6px
-
-			&.closed
-				border-width 4px 0 4px 8px
-				border-color transparent transparent transparent white
-
-			&.open
-				border-width 0 0 8px 8px
-				border-color transparent transparent white transparent
-			
-			&#aboutTriangle
-				&.open
-					border-bottom-color yellow
 				&.closed
-					border-left-color yellow
-		
-			&#eventsTriangle
+					border-width 4px 0 4px 8px
+					border-color transparent transparent transparent white
+
 				&.open
-					border-bottom-color blue
-				&.closed
-					border-left-color blue
-	
-		&.closed
+					border-width 0 0 8px 8px
+					border-color transparent transparent white transparent
+
+				&#aboutTriangle
+					&.open
+						border-bottom-color yellow
+					&.closed
+						border-left-color yellow
+
+				&#eventsTriangle
+					&.open
+						border-bottom-color blue
+					&.closed
+						border-left-color blue
+
+		&.sidebar.closed
 			overflow-y hidden
 			display flex
 			align-items center
-			justify-content center
 			width 50px
+			flex-direction column
 
 			.heading
 				padding 0
 				flex-direction row
 				transform rotate(-90deg)
 				background transparent
+				position absolute
+				bottom 50%
 
 				img
 					margin-right 10px
 					height 40px
 					width 40px
 					margin-bottom 0
-			
+
 			.subject, .links, .countdown, .social
 				display none

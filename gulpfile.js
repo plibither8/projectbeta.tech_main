@@ -54,6 +54,6 @@ gulp.task('deployWatch', ['pug', 'stylus', 'scripts', 'deploy'], function() {
 	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl', 'src/js/**/*.js'], ['pug', 'stylus', 'scripts', 'deploy']);
 })
 
-gulp.task('default', ['pug', 'stylus', 'scripts'], function () {
+gulp.task('default', ['webserver', 'pug', 'stylus', 'scripts'], function () {
 	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl', 'src/js/**/*.js'], ['pug', 'stylus', 'scripts']);
 })
