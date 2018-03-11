@@ -52,6 +52,7 @@ section.container
 				margin 0 auto
 				background #161719
 				flex-direction column
+				border-bottom 1px solid #0e0f10
 
 				img
 					height 80px
@@ -63,7 +64,6 @@ section.container
 				height 28px
 				justify-content flex-start
 				cursor pointer
-				border-top 1px solid #0e0f10
 				border-bottom 1px solid #0e0f10
 
 				p
@@ -74,13 +74,14 @@ section.container
 				.triangle
 					margin 0 6px
 
-			.links
+			.files
 				width 100%
 				padding-bottom 20px
 				overflow-y auto
 				overflow-x hidden
 				border-right 1px solid #0e0f10
-
+				border-bottom 1px solid #0e0f10
+				
 				.container
 					overflow hidden
 
@@ -133,7 +134,19 @@ section.container
 				&::-webkit-scrollbar-track
 					background #3e4044
 
+			.notifications
+				border-bottom 1px solid #0e0f10
+				
+				ul
+					padding 10px 0
+
+					li
+						color #bbb
+						padding-left 20px
+						font-style italic
+
 			.countdown
+				border-bottom 1px solid #0e0f10
 
 				.timer
 					width 100%
@@ -155,7 +168,7 @@ section.container
 
 			.social
 				width 100%
-
+				
 				ul
 					width 100%
 					padding-bottom 20px
@@ -189,7 +202,7 @@ section.container
 							background #ffffff33
 
 			&::-webkit-scrollbar
-				width 8px
+				width 6px
 
 			&::-webkit-scrollbar-thumb
 				background #bbb
@@ -245,5 +258,5 @@ section.container
 					width 40px
 					margin-bottom 0
 
-			.subject, .links, .countdown, .social
+			.subject, .files, .notifications, .countdown, .social
 				display none
