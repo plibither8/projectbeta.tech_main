@@ -7,8 +7,16 @@ section.sidebar
 	border-right 1px solid #0e0f10
 	font-weight 500
 	user-select none
-	overflow-x hidden
+	overflow hidden
 	-webkit-overflow-scrolling touch
+
+	> .container
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+		overflow-y auto
+		overflow-x hidden
+		min-height 100vh
 
 	&.open
 		width 250px
@@ -29,6 +37,7 @@ section.sidebar
 			position absolute
 			bottom 50%
 			border none
+			min-height auto
 
 			img
 				margin-right 10px
@@ -36,7 +45,7 @@ section.sidebar
 				width 40px
 				margin-bottom 0
 
-		.subject, #files, #notifications, #countdown, #social
+		#sidebar-content, #footer
 			display none
 
 	> svg
@@ -64,6 +73,8 @@ section.sidebar
 	background #161719
 	flex-direction column
 	border-bottom 1px solid #0e0f10
+	width 100%
+	min-height 183px
 
 	h1
 		font-size 30px
@@ -79,6 +90,10 @@ section.sidebar
 		height 80px
 		width 80px
 		margin-bottom 20px
+
+#sidebar-content
+	width 100%
+	flex 1
 
 .subject
 	background #fff2
@@ -247,3 +262,17 @@ section.sidebar
 
 &::-webkit-scrollbar-track
 	background #3e4044
+
+#footer
+	background #0003
+	flex-direction column
+	width 100%
+	color #666
+	text-transform uppercase
+	font-size 12px
+	min-height 52px
+	border-top 1px solid #0e0f10
+	margin-top 30px
+	
+	p:first-child
+		margin-bottom 5px
