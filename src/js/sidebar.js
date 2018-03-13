@@ -34,7 +34,7 @@ for (var i = 0; i < buttons.length; i++) {
 }
 function openCloseTabs(i) {
 	return function () {
-		var target = buttonsTexts[i].innerHTML.toLowerCase();
+		var target = buttonsTexts[i].innerHTML;
 		var triDiv = document.querySelector("#" + target + "Triangle");
 		var container = document.querySelector("#" + target);
 		if (triDiv.classList.contains('closed')) {

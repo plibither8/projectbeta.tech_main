@@ -7,7 +7,8 @@ section.sidebar
 	border-right 1px solid #0e0f10
 	font-weight 500
 	user-select none
-	overflow hidden
+	overflow-y hidden
+	overflow-x hidden
 	-webkit-overflow-scrolling touch
 
 	> .container
@@ -18,12 +19,19 @@ section.sidebar
 		overflow-x hidden
 		min-height 100vh
 
+		&::-webkit-scrollbar
+			width 6px
+
+		&::-webkit-scrollbar-thumb
+			background #bbb
+
+		&::-webkit-scrollbar-track
+			background #3e4044
+
 	&.open
 		width 250px
-		overflow-y auto
 
 	&.closed
-		overflow-y hidden
 		display flex
 		align-items center
 		width 50px
@@ -68,13 +76,12 @@ section.sidebar
 			height 20px
 
 #heading
-	padding 13% 0
 	margin 0 auto
 	background #161719
 	flex-direction column
 	border-bottom 1px solid #0e0f10
 	width 100%
-	min-height 183px
+	min-height 190px
 
 	h1
 		font-size 30px
@@ -106,6 +113,7 @@ section.sidebar
 		color #ddd
 		font-family "Ubuntu"
 		font-size 15px
+		text-transform uppercase
 
 	.triangle
 		margin 0 6px
@@ -253,15 +261,6 @@ section.sidebar
 			border-bottom-color blue
 		&.closed
 			border-left-color blue
-
-&::-webkit-scrollbar
-	width 6px
-
-&::-webkit-scrollbar-thumb
-	background #bbb
-
-&::-webkit-scrollbar-track
-	background #3e4044
 
 #footer
 	background #0003
