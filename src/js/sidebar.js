@@ -1,6 +1,6 @@
 // Open-Close Files
-var aboutButton = document.querySelector(".files li:nth-child(2)");
-var eventsButton = document.querySelector(".files li:nth-child(6)");
+var aboutButton = document.querySelector("#files li:nth-child(2)");
+var eventsButton = document.querySelector("#files li:nth-child(6)");
 
 aboutButton.addEventListener('click', openCloseFiles('about'));
 eventsButton.addEventListener('click', openCloseFiles('events'));
@@ -36,7 +36,7 @@ function openCloseTabs(i) {
 	return function () {
 		var target = buttonsTexts[i].innerHTML.toLowerCase();
 		var triDiv = document.querySelector("#" + target + "Triangle");
-		var container = document.querySelector("." + target + "");
+		var container = document.querySelector("#" + target);
 		if (triDiv.classList.contains('closed')) {
 			triDiv.classList.remove('closed');
 			triDiv.classList.add('open');
@@ -72,7 +72,6 @@ function countdown () {
 		if (distance < 0) {
 
 			clearInterval(timer);
-			document.getElementById('countdown').innerHTML = 'EXPIRED!';
 
 			return;
 		}
