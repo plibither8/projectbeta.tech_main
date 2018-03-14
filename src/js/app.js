@@ -1,4 +1,7 @@
-var routerApp = angular.module('routerApp', ['ui.router']);
+var routerApp = angular.module('routerApp', ['ui.router', 'angular-loading-bar'])
+	.config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
+		cfpLoadingBarProvider.includeSpinner = false;
+	}]);
 
 routerApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
