@@ -17,6 +17,18 @@ section.main
 		min-height 100vh
 		flex-direction column
 		height auto
+		justify-content flex-start
+
+		>.container
+			margin 5vh 0
+
+		> h1
+			font-size 60px
+			margin 4vh 0 0 0
+
+			span.version
+				font-size 45px
+				font-family "Ubuntu Mono", 'Courier New', Courier, monospace
 
 	p
 		font-size 16px
@@ -28,12 +40,8 @@ section.main
 		margin 4vh 0 0 0		
 
 	h1
-		font-size 60px
-		margin 4vh 0 0 0
-
-		span.version
-			font-size 45px
-			font-family "Ubuntu Mono", 'Courier New', Courier, monospace
+		font-size 5em
+		font-weight 100
 	
 	h2.dates
 		color #d66d4d
@@ -61,13 +69,14 @@ section.main
 		height auto
 		justify-content space-between
 		align-items flex-start
+		margin-top 6vh
 
 		.about, .contact
 			width 45%
 
 			h1
 				font-size 27px
-				font-weight bold
+				font-weight 500
 				padding-bottom 5px
 				display inline-block
 			
@@ -76,7 +85,8 @@ section.main
 				font-size 17px
 				font-weight bold
 				text-transform uppercase
-				padding 2px 0 2px 5px
+				border-bottom 1px solid
+				padding 0 0 6px 0
 			
 			p
 				padding 10px 0 20px 0
@@ -87,15 +97,16 @@ section.main
 				text-decoration none
 				color #d66d4d
 
-				&.contact
-					display table
+				&.email, &.phone
 					margin 5px 0
 					border none
-					width 100%
-
-			.seperator
-				padding 0 15px
-				user-select none
+					white-space nowrap
+				
+				&.email
+					display block
+				
+				&.phone
+					padding-left 10px
 		
 		.contact
 
@@ -115,7 +126,7 @@ section.main
 			color #111
 		
 		h1
-			color #000
+			color #222
 
 			span.version
 				color #666
@@ -133,22 +144,20 @@ section.main
 			.about, .contact
 
 				h1
-					color #111
+					color #333
 				
 				h2
-					background #ddd
+					border-color #ddd
+					color #444
 
-				h2, p
+				p
 					color #222
 				
 				a:hover
 					color #000
 
-				.seperator
-					color #bbb
-
 	&.dark
-		background #272b2f
+		background linear-gradient(169deg,#1f2225 50%,#272b2f 50%)
 
 		img.white
 			display block
@@ -160,7 +169,7 @@ section.main
 			color #eee
 		
 		h1
-			color #fff
+			color #ddd
 
 			span.version
 				color #909090
@@ -181,16 +190,13 @@ section.main
 					color #ddd
 				
 				h2
-					background #fff1
+					border-color #333
 
 				h2, p
 					color #bbb
 				
 				a:hover
 					color #fff
-
-				.seperator
-					color #666
 
 @import "imports/pages/*"
 @import "imports/media-queries"
