@@ -1,4 +1,4 @@
-@require "../imports/base.styl"
+@require "imports/base.styl"
 
 section.container
 	overflow-x hidden
@@ -6,7 +6,7 @@ section.container
 section.main
 	height 100%
 	margin-left 250px
-	overflow-y scroll
+	overflow-y auto
 	overflow-x hidden
 	align-items flex-start
 	-webkit-overflow-scrolling touch
@@ -16,7 +16,6 @@ section.main
 		width 90%
 		min-height 100vh
 		flex-direction column
-		margin 0 0 4vh 0
 		height auto
 
 	p
@@ -53,7 +52,7 @@ section.main
 				border-left 2px solid
 
 	.hr
-		height 1px
+		height 0px
 		width 100%
 		margin 4vh 0
 	
@@ -104,7 +103,7 @@ section.main
 				padding 0
 
 	&.light
-		background #f6f6f6
+		background linear-gradient(169deg, #f6f6f6 50%, #fff 50%)
 
 		img.white
 			display none
@@ -193,5 +192,9 @@ section.main
 				.seperator
 					color #666
 
+@import "imports/pages/alumni"
+@import "imports/pages/contact"
+@import "imports/pages/history"
+@import "imports/pages/team"
 
-@import "../imports/media-queries"
+@import "imports/media-queries"

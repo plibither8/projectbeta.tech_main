@@ -22,7 +22,7 @@ gulp.task('pug', function() {
 })
 
 gulp.task('stylus', function() {
-	return gulp.src('src/styl/pages/*.styl')
+	return gulp.src('src/styl/*.styl')
 	.pipe(stylus({
 		compress: true
 	}))
