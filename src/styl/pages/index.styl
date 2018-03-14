@@ -17,6 +17,7 @@ section.main
 		min-height 100vh
 		flex-direction column
 		margin 0 0 4vh 0
+		height auto
 
 	p
 		font-size 16px
@@ -27,7 +28,7 @@ section.main
 		width 150px
 		margin 4vh 0 0 0		
 
-	h1.title
+	h1
 		font-size 60px
 		margin 4vh 0 0 0
 
@@ -48,11 +49,11 @@ section.main
 			padding 0 10px
 
 			&:nth-child(2)
-				border-right 3px solid
-				border-left 3px solid
+				border-right 2px solid
+				border-left 2px solid
 
 	.hr
-		height 4px
+		height 1px
 		width 100%
 		margin 4vh 0
 	
@@ -67,14 +68,14 @@ section.main
 
 			h1
 				font-size 27px
-				font-weight 100
+				font-weight bold
 				padding-bottom 5px
 				display inline-block
 			
 			h2
 				margin 20px 0 10px 0
 				font-size 17px
-				font-weight 100
+				font-weight bold
 				text-transform uppercase
 				padding 2px 0 2px 5px
 			
@@ -105,10 +106,16 @@ section.main
 	&.light
 		background #f6f6f6
 
+		img.white
+			display none
+		
+		img.black
+			display block
+
 		p
 			color #111
 		
-		h1.title
+		h1
 			color #000
 
 			span.version
@@ -117,7 +124,7 @@ section.main
 		h2.dates
 
 			span
-				border-color #bbb
+				border-color #d6d6d6
 		
 		.hr
 			background #ccc
@@ -144,10 +151,16 @@ section.main
 	&.dark
 		background #272b2f
 
+		img.white
+			display block
+		
+		img.black
+			display none
+
 		p
 			color #eee
 		
-		h1.title
+		h1
 			color #fff
 
 			span.version
@@ -159,7 +172,7 @@ section.main
 				border-color #444
 		
 		.hr
-			background #555
+			background #33393e
 		
 		.info
 
@@ -169,7 +182,7 @@ section.main
 					color #ddd
 				
 				h2
-					background #1d2023
+					background #fff1
 
 				h2, p
 					color #bbb

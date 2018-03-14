@@ -16,7 +16,7 @@ gulp.task('webserver', function () {
 })
 
 gulp.task('pug', function() {
-	return gulp.src('src/pug/pages/*.pug')
+	return gulp.src('src/pug/pages/**/*.pug')
 	.pipe(pug())
 	.pipe(gulp.dest('dist/'));
 })

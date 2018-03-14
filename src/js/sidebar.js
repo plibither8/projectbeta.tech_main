@@ -99,7 +99,6 @@ var mainEl = document.querySelector('section.main');
 var hamburger = document.querySelector('#hamburger');
 var cross = document.querySelector('#cross');
 var themeSwitchButton = document.querySelector('#color');
-var logo = document.querySelector('section.main img');
 var isMobile = getComputedStyle(html).maxWidth === '800px' ? true : false;
 
 if (isMobile) {
@@ -150,11 +149,9 @@ function themeSwitcher() {
 	if (mainEl.classList.contains('light')) {
 		mainEl.classList.remove('light');
 		mainEl.classList.add('dark');
-		logo.src = "/assets/img/logo-white.svg";
 	} else {
 		mainEl.classList.add('light');
 		mainEl.classList.remove('dark');
-		logo.src = "/assets/img/logo-black.svg";
 	}
 };
 
