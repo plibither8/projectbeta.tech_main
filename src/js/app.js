@@ -1,8 +1,4 @@
 var routerApp = angular.module('routerApp', ['ui.router', 'angular-loading-bar'])
-	.config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
-		cfpLoadingBarProvider.includeSpinner = false;
-	}])
-
 	.run(['$rootScope', '$state', '$stateParams',
 		function ($rootScope, $state, $stateParams) {
 			$rootScope.$state = $state;
@@ -93,5 +89,5 @@ routerApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider
 			}
 		});
 	
-	$locationProvider.html5Mode(true).hashPrefix('!');
+	$locationProvider.html5Mode(true);
 });
