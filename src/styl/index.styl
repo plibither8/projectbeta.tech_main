@@ -9,7 +9,6 @@ section.main
 	overflow-y auto
 	overflow-x hidden
 	align-items flex-start
-	-webkit-overflow-scrolling touch
 
 	> .container
 		max-width 1000px
@@ -89,7 +88,7 @@ section.main
 				padding 0 0 6px 0
 			
 			p
-				padding 10px 0 20px 0
+				padding 20px 0 0 0
 			
 			a
 				padding-bottom 3px
@@ -113,6 +112,9 @@ section.main
 			p
 				padding 0
 
+				&:last-child
+					margin-bottom 30px
+
 	&.light
 		background linear-gradient(169deg, #f6f6f6 50%, #fff 50%)
 
@@ -124,7 +126,7 @@ section.main
 
 		p
 			color #111
-		
+
 		h1
 			color #222
 
@@ -168,6 +170,9 @@ section.main
 		p
 			color #eee
 		
+		h1.title
+			color white
+		
 		h1
 			color #ddd
 
@@ -177,7 +182,7 @@ section.main
 		h2.dates
 
 			span
-				border-color #444
+				border-color #666
 		
 		.hr
 			background #33393e
@@ -190,7 +195,7 @@ section.main
 					color #ddd
 				
 				h2
-					border-color #333
+					border-color #555
 
 				h2, p
 					color #bbb

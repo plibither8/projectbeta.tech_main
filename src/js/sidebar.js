@@ -144,7 +144,6 @@ hamburger.addEventListener('click', sidebarOpen);
 cross.addEventListener('click', sidebarClose);
 
 //Theme switcher
-
 function themeSwitcher() {
 	if (mainEl.classList.contains('light')) {
 		mainEl.classList.remove('light');
