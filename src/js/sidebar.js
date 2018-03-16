@@ -1,4 +1,6 @@
 // Open-Close Files
+
+/*
 var aboutButton = document.querySelector("#files li:nth-child(2)");
 var eventsButton = document.querySelector("#files li:nth-child(6)");
 
@@ -25,6 +27,7 @@ function openCloseFiles(target) {
 		}
 	};
 }
+*/
 
 // Open-Close Tabs
 var buttons = document.querySelectorAll(".subject");
