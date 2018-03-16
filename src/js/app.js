@@ -32,6 +32,7 @@
 					if (isMobile) {
 						setTimeout(sidebarClose, 100);
 					}
+					mainEl.scroll(0,0);
 				}
 			})
 
@@ -43,6 +44,7 @@
 					if (isMobile) {
 						setTimeout(sidebarClose, 100);
 					}
+					mainEl.scroll(0,0);
 				}
 			})
 
@@ -54,6 +56,7 @@
 					if (isMobile) {
 						setTimeout(sidebarClose, 100);
 					}
+					mainEl.scroll(0,0);
 				}
 			})
 
@@ -65,6 +68,7 @@
 					if (isMobile) {
 						setTimeout(sidebarClose, 100);
 					}
+					mainEl.scroll(0,0);
 				}
 			})
 
@@ -76,6 +80,7 @@
 					if (isMobile) {
 						setTimeout(sidebarClose, 100);
 					}
+					mainEl.scroll(0,0);
 				}
 			})
 
@@ -87,6 +92,7 @@
 					if (isMobile) {
 						setTimeout(sidebarClose, 100);
 					}
+					mainEl.scroll(0,0);
 				}
 			});
 		

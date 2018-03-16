@@ -47,14 +47,15 @@ section.main
 				text-align center
 				text-transform uppercase
 				margin-bottom 4vh
+			
+			> p
+				margin 0 0 20px 0
 
 			.section
 				margin-bottom 20px
-				padding 10px 0 10px 10px
+				padding 15px
 				background #eee
-				border-left 4px solid #c6c6c6
-				box-shadow 0 0 3px #ccc
-				border-radius 3px 0 0 3px
+				border 1px solid #c6c6c6
 
 				h2
 					color #444
@@ -65,6 +66,7 @@ section.main
 				
 				p
 					color #111
+				
 
 	p
 		font-size 16px
@@ -99,16 +101,15 @@ section.main
 	.info
 		width 100%
 		height auto
-		justify-content space-between
 		align-items flex-start
 		margin-top 60px
 		flex-wrap wrap
 		flex-direction column
-		max-height 1000px
+		max-height 550px
 
 		.info-block
 			width 45%
-			padding 3vh 0 5vh 0
+			padding 3vh 0
 
 			h1
 				font-size 27px
@@ -131,25 +132,6 @@ section.main
 				border-bottom 1px solid
 				text-decoration none
 				color #d66d4d
-
-				&.email, &.phone
-					margin 5px 0
-					border none
-					white-space nowrap
-				
-				&.email
-					display block
-				
-				&.phone
-					padding-left 10px
-		
-		#contact
-
-			p
-				padding 0
-
-				&:last-child
-					margin-bottom 30px
 
 	&.light
 		background linear-gradient(169deg, #f6f6f6 50%, #fff 50%)

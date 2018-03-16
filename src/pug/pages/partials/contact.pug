@@ -1,19 +1,54 @@
 #contact.ui-state.container
 
-    h1 contact
+	h1 contact
 
-    .section
+	p The best way to get in contact with us is by mailing us at any one of the given email IDs, or by filling the form below. If deemed appropriate, you may reach out to us by calling any one of the given phone numbers.
+	p You can connect with us on <a href="https://facebook.com/ProjectBetaOfficial/" target="_blank">Facebook</a> and <a href="https://instagram.com/projectbeta.tech/" target="_blank">Instagram</a> too.
 
-        h2 Email
-    
-    .section
+	.section
 
-        h2 Phone
+		form(action="https://formspree.io/contact@projectbeta.tech" method="POST")
+			
+			h3 Name
+			input(type="text" name="name" placeholder="Enter your full name")
+			
+			h3 Email
+			input(type="email" name="email" placeholder="Enter your email")
+			
+			h3 Message
+			textarea(rows="5" name="message" placeholder="Enter your message")
 
-    .section
+			input(type="submit" value="Send")
 
-        h2 Address
-    
-    .section
+	.section
 
-        h2 Contact Form
+		h2 Email
+		a(href="mailto:contact@projectbeta.tech").email.blue contact@projectbeta.tech
+		a(href="mailto:president@projectbeta.tech").email.blue president@projectbeta.tech
+		a(href="mailto:faculty@projectbeta.tech").email.blue faculty@projectbeta.tech
+	
+	.section
+
+		h2 Phone
+		p
+			| Arya Nagar, President:
+			a(href="tel:+917042201997").phone +91 7042201997
+		p
+			| Mehul Agarwal, Vice President:
+			a(href="tel:+919205915422").phone +91 9205915422
+		p
+			| Mrs. Anuja Mittal, Faculty-in-charge:
+			a(href="tel:+911234563545").phone +91 1234563545
+
+	.section
+
+		h2 Address
+		
+		p
+			| Sanskriti School,
+			br
+			| Dr. S. Radhakrishnan Marg,
+			br
+			| Chanakyapuri,
+			br
+			| New Delhi, Delhi 110021 
