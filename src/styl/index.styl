@@ -20,6 +20,10 @@ section.main
 
 		>.container
 			margin 5vh 0
+		
+		> img
+			width 150px
+			margin 4vh 0 0 0
 
 		> h1
 			font-size 60px
@@ -38,12 +42,12 @@ section.main
 			bottom 0
 		
 		.ui-state
-
+			
 			h1
 				font-size 35px
 				font-weight 100
 				padding-bottom 10px
-				border-bottom 1px solid #bbb
+				border-bottom 1px solid
 				text-align center
 				text-transform uppercase
 				margin-bottom 4vh
@@ -51,32 +55,33 @@ section.main
 			> p
 				margin 0 0 20px 0
 
+			a
+				padding-bottom 3px
+				border-bottom 1px solid
+				text-decoration none
+
 			.section
 				margin-bottom 20px
 				padding 15px
-				background #eee
-				border 1px solid #c6c6c6
+				border 1px solid
 
 				h2
-					color #444
 					font-size 21px
 					padding 0 0 6px 0
 					font-weight 300
 					text-transform uppercase
-				
-				p
-					color #111
-				
-
+			
 	p
 		font-size 16px
 		line-height 24px
 		letter-spacing .5px
-	
-	img
-		width 150px
-		margin 4vh 0 0 0
-	
+
+	a
+		padding-bottom 3px
+		border-bottom 1px solid
+		text-decoration none
+		color #d66d4d
+
 	h2.dates
 		color #d66d4d
 		margin 4vh 0 0 0
@@ -126,98 +131,8 @@ section.main
 			
 			p
 				padding 20px 0 0 0
-			
-			a
-				padding-bottom 3px
-				border-bottom 1px solid
-				text-decoration none
-				color #d66d4d
-
-	&.light
-		background linear-gradient(169deg, #f6f6f6 50%, #fff 50%)
-
-		img.white
-			display none
 		
-		img.black
-			display block
-
-		p
-			color #111
-
-		h1
-			color #222
-
-			span.version
-				color #666
-		
-		h2.dates
-
-			span
-				border-color #d6d6d6
-		
-		.hr
-			background #ccc
-		
-		.info
-
-			.info-block
-
-				h1
-					color #444
-					border-color #bbb
-				
-				h2
-					color #444
-
-				p
-					color #222
-				
-				a:hover
-					color #000
-
-	&.dark
-		background linear-gradient(169deg,#1f2225 50%,#272b2f 50%)
-
-		img.white
-			display block
-		
-		img.black
-			display none
-
-		p
-			color #eee
-		
-		h1.title
-			color white
-		
-		h1
-			color #ddd
-
-			span.version
-				color #909090
-		
-		h2.dates
-
-			span
-				border-color #666
-		
-		.hr
-			background #33393e
-		
-		.info
-
-			.info-block
-
-				h1
-					color #ddd
-					border-color #555
-
-				h2, p
-					color #bbb
-				
-				a:hover
-					color #fff
-
+	
+@import "imports/themes"
 @import "imports/pages/*"
 @import "imports/media-queries"
