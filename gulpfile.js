@@ -31,7 +31,7 @@ gulp.task('stylus', function() {
 	.pipe(autoprefix({
 		cascade: false
 	}))
-	.pipe(sourcemaps.write())
+	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest('dist/assets/css'));
 })
 
