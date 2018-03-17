@@ -83,6 +83,7 @@ section.sidebar
 	border-bottom 1px solid #0e0f10
 	width 100%
 	min-height 190px
+	text-decoration none !important
 
 	h1
 		font-size 30px
@@ -130,6 +131,7 @@ section.sidebar
 				width 100%
 				color #eee
 				cursor pointer
+				transition 0s
 
 				a
 					width 100%
@@ -218,6 +220,8 @@ section.sidebar
 				justify-content flex-start
 				display inline-flex
 				height 100%
+				color inherit
+				transition-duration 0.1s
 
 				svg
 					height 15px
@@ -229,8 +233,30 @@ section.sidebar
 					&:nth-child(2)
 						margin 0 15px
 
+			&:nth-child(1)
+				color blue
+				svg
+					path 
+						fill blue
+			&:nth-child(2)
+				color #6cc644
+				svg
+					path 
+						fill #6cc644
+			&:nth-child(3)
+				color #ef5b77
+				svg
+					path 
+						fill #ef5b77
+
 			&:hover
-				background #ffffff33
+				
+				a
+					color white
+
+					svg
+						path
+							fill white
 
 .triangle
 	width 0
