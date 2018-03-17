@@ -99,6 +99,7 @@ countdown();
 var html = document.documentElement;
 var sidebar = document.querySelector('section.sidebar');
 var mainEl = document.querySelector('section.main');
+var uiContainer = document.querySelector('section.main > div.container');
 var hamburger = document.querySelector('#hamburger');
 var cross = document.querySelector('#cross');
 var themeSwitchButton = document.querySelector('#color');

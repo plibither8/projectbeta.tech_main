@@ -1,4 +1,6 @@
+
 (function(){
+	
 	var routerApp = angular.module('routerApp', ['ui.router', 'angular-loading-bar'])
 		.run(['$rootScope', '$state', '$stateParams',
 			function ($rootScope, $state, $stateParams) {
@@ -15,7 +17,10 @@
 			.state('index', {
 				url: '/',
 				templateUrl: 'partials/home.html',
-				data: { pageTitle: 'ProjectBeta 2018' }
+				data: { pageTitle: 'ProjectBeta 2018' },
+				onEnter: function() {
+					uiContainer.style.justifyContent = "flex-start";
+				}
 			})
 
 			.state('404', {
@@ -33,6 +38,7 @@
 						setTimeout(sidebarClose, 100);
 					}
 					mainEl.scroll(0,0);
+					uiContainer.style.justifyContent = "flex-start";
 				}
 			})
 
@@ -45,6 +51,7 @@
 						setTimeout(sidebarClose, 100);
 					}
 					mainEl.scroll(0,0);
+					uiContainer.style.justifyContent = "space-between";
 				}
 			})
 
@@ -57,6 +64,7 @@
 						setTimeout(sidebarClose, 100);
 					}
 					mainEl.scroll(0,0);
+					uiContainer.style.justifyContent = "space-between";
 				}
 			})
 
@@ -69,6 +77,7 @@
 						setTimeout(sidebarClose, 100);
 					}
 					mainEl.scroll(0,0);
+					uiContainer.style.justifyContent = "space-between";
 				}
 			})
 
@@ -81,6 +90,7 @@
 						setTimeout(sidebarClose, 100);
 					}
 					mainEl.scroll(0,0);
+					uiContainer.style.justifyContent = "space-between";
 				}
 			})
 
@@ -93,9 +103,10 @@
 						setTimeout(sidebarClose, 100);
 					}
 					mainEl.scroll(0,0);
+					uiContainer.style.justifyContent = "space-between";
 				}
 			});
 		
 		$locationProvider.html5Mode(true);
 	});
-}())
+}());

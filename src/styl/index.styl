@@ -10,13 +10,15 @@ section.main
 	overflow-x hidden
 	align-items flex-start
 
+	canvas
+		position fixed
+
 	> .container
 		max-width 1000px
 		width 90%
 		min-height 100vh
 		flex-direction column
 		height auto
-		justify-content flex-start
 
 		>.container
 			margin 5vh 0
@@ -32,14 +34,6 @@ section.main
 			span.version
 				font-size 45px
 				font-family "Ubuntu Mono", 'Courier New', Courier, monospace
-
-		&::after
-			content ''
-			height 7px
-			width 100%
-			background linear-gradient(to right, #ff5f6d, #ffc371)
-			position absolute
-			bottom 0
 		
 		.ui-state
 			
@@ -51,6 +45,7 @@ section.main
 				text-align center
 				text-transform uppercase
 				margin-bottom 4vh
+				color #d66d4d
 			
 			> p
 				margin 0 0 20px 0
@@ -64,13 +59,18 @@ section.main
 				margin-bottom 20px
 				padding 15px
 				border 1px solid
+				border-left-width 5px
+				border-radius 2px
 
 				h2
 					font-size 21px
 					padding 0 0 6px 0
 					font-weight 300
 					text-transform uppercase
-			
+		
+		> a
+			margin-bottom 30px
+
 	p
 		font-size 16px
 		line-height 24px
@@ -131,7 +131,9 @@ section.main
 			
 			p
 				padding 20px 0 0 0
-		
+
+			#about-block
+				padding-bottom 20px	
 	
 @import "imports/themes"
 @import "imports/pages/*"
