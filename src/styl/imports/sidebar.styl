@@ -7,18 +7,17 @@ section.sidebar
 	border-right 1px solid #0e0f10
 	font-weight 500
 	user-select none
-	overflow-y hidden
+	overflow-y auto
 	overflow-x hidden
 	-webkit-overflow-scrolling touch
 	z-index 2
+	transition 0.05s all ease-out
 
 	> .container
 		flex-direction column
 		justify-content flex-start
 		align-items flex-start
-		overflow-y auto
 		overflow-x hidden
-		min-height 100vh
 
 		&::-webkit-scrollbar
 			width 6px
@@ -53,6 +52,9 @@ section.sidebar
 				height 40px
 				width 40px
 				margin-bottom 0
+			
+			a
+				text-decoration none
 
 		#sidebar-content, #footer
 			display none
@@ -70,11 +72,6 @@ section.sidebar
 
 		&#cross
 			margin 15px 0 0 15px
-		
-		&#color
-			margin-top 15px
-			left 215px
-			height 20px
 
 #heading
 	margin 0 auto
@@ -83,16 +80,19 @@ section.sidebar
 	border-bottom 1px solid #0e0f10
 	width 100%
 	min-height 190px
-	text-decoration none !important
+
+	a
+		text-decoration none !important
 
 	h1
 		font-size 30px
 		color #ffffff
-	
+
 	img
 		height 80px
 		width 80px
 		margin-bottom 20px
+		box-sizing content-box
 
 #sidebar-content
 	width 100%
@@ -131,7 +131,6 @@ section.sidebar
 				width 100%
 				color #eee
 				cursor pointer
-				transition 0s
 
 				a
 					width 100%
@@ -221,7 +220,6 @@ section.sidebar
 				display inline-flex
 				height 100%
 				color inherit
-				transition-duration 0.1s
 
 				svg
 					height 15px
