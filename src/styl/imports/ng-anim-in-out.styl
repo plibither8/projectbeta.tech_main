@@ -1,0 +1,24 @@
+[ui-view]
+	position absolute
+
+.anim-in-out.anim-in-setup.anim-fade,
+.anim-in-out.anim-in-setup .anim-fade
+	opacity 0
+
+.anim-in-out.anim-in.anim-fade,
+.anim-in-out.anim-in .anim-fade
+	opacity 1
+	-webkit-transition all 500ms
+	transition all 500ms
+
+.anim-in-out.anim-out-setup.anim-fade,
+.anim-in-out.anim-out-setup .anim-fade
+	opacity 1
+	-webkit-transition all 500ms
+	transition all 500ms
+
+.anim-in-out.anim-out.anim-fade,
+.anim-in-out.anim-out .anim-fade
+	opacity 0
+	-webkit-transition all 500ms
+	transition all 500ms
