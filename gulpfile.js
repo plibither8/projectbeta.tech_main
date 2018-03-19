@@ -3,6 +3,7 @@ const babel = require("gulp-babel");
 const concat = require("gulp-concat");
 const gulp = require("gulp");
 const pug = require("gulp-pug");
+const cachebust = require('gulp-cache-bust');
 const sourcemaps = require('gulp-sourcemaps');
 const stylus = require("gulp-stylus");
 const surge = require("gulp-surge");
@@ -18,7 +19,10 @@ gulp.task('webserver', function () {
 
 gulp.task('pug', function() {
 	return gulp.src('src/pug/pages/**/*.pug')
-	.pipe(pug())	
+	.pipe(pug())
+	.pipe(cachebust({
+		type: 'timestamp'
+	}))
 	.pipe(gulp.dest('dist/'));
 })
 
@@ -36,14 +40,14 @@ gulp.task('stylus', function() {
 })
 
 gulp.task('scripts', function() {
-	return gulp.src('src/js/*.js')
+	return gulp.src('src/js/**/*.js')
 	.pipe(babel({
 		comments: false,
 		presets: ['env'],
 		minified: true
 	}))
 	.pipe(concat('scripts.js'))
-	.pipe(gulp.dest('dist/assets/js'))
+	.pipe(gulp.dest('dist/assets/js'));
 })
 
 gulp.task('deploy', function() {
