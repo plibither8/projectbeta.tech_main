@@ -57,6 +57,6 @@ gulp.task('deploy', function() {
 	})
 })
 
-gulp.task('default', ['webserver', 'pug', 'stylus', 'scripts'], function () {
+gulp.task('default', ['pug', 'stylus', 'scripts'], function () {
 	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl', 'src/js/**/*.js'], ['pug', 'stylus', 'scripts']);
 })
