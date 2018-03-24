@@ -1,9 +1,15 @@
-const autoprefix = require("gulp-autoprefixer");
+/*jshint esversion: 6 */
+
+const autoprefixer = require("autoprefixer");
 const babel = require("gulp-babel");
+const cachebust = require('gulp-cache-bust');
 const concat = require("gulp-concat");
+const cssnano = require("cssnano");
 const gulp = require("gulp");
 const pug = require("gulp-pug");
-const cachebust = require('gulp-cache-bust');
+const postcss = require('gulp-postcss');
+const pxtorem = require('postcss-pxtorem');
+const rucksack = require('rucksack-css');
 const sourcemaps = require('gulp-sourcemaps');
 const stylus = require("gulp-stylus");
 const surge = require("gulp-surge");
@@ -17,7 +23,7 @@ gulp.task('webserver', function () {
 		}))
 })
 
-gulp.task('pug', function() {
+gulp.task('html', function() {
 	return gulp.src('src/pug/pages/**/*.pug')
 	.pipe(pug())
 	.pipe(cachebust({
@@ -26,20 +32,16 @@ gulp.task('pug', function() {
 	.pipe(gulp.dest('dist/'));
 })
 
-gulp.task('stylus', function() {
+gulp.task('css', function() {
 	return gulp.src('src/styl/*.styl')
 	.pipe(sourcemaps.init())
-	.pipe(stylus({
-		compress: true
-	}))
-	.pipe(autoprefix({
-		cascade: false
-	}))
+	.pipe(stylus())
+	.pipe(postcss([autoprefixer, rucksack, pxtorem, cssnano]))
 	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest('dist/assets/css'));
 })
 
-gulp.task('scripts', function() {
+gulp.task('js', function() {
 	return gulp.src('src/js/**/*.js')
 	.pipe(babel({
 		comments: false,
@@ -57,6 +59,6 @@ gulp.task('deploy', function() {
 	})
 })
 
-gulp.task('default', ['pug', 'stylus', 'scripts'], function () {
-	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl', 'src/js/**/*.js'], ['pug', 'stylus', 'scripts']);
+gulp.task('default', ['html', 'css', 'js'], function () {
+	gulp.watch(['src/pug/**/*.pug', 'src/styl/**/*.styl', 'src/js/**/*.js'], ['html', 'css', 'js']);
 })
